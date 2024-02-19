@@ -1,0 +1,35 @@
+name: Push Action
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: ["main"]
+
+jobs:
+  get-workflows:
+    # This job checks out a copy of the predictables/.github repository
+    # and runs the workflows in the .github/workflows directory
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: predictables/.github
+          ref: main
+          path: .github
+      - name: Install gh
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+          sudo apt-add-repository https://cli.github.com/packages
+          sudo apt update
+          sudo apt install gh
+      - name: Run python workflows
+        run: |
+          for file in .github/workflows/python/*.yml; do
+            echo "Running $file"
+            gh workflow run $file
+          done
+          
+
+  

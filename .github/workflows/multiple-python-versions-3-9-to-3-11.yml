@@ -1,0 +1,297 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python package
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ubuntu-3_09:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+          
+  ubuntu-3_10:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+  ubuntu-3_11:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+  windows-3_09:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+          
+  windows-3_10:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+  windows-3_11:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          pip install -r requirements.txt
+
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+  macos-3_09:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+          
+  macos-3_10:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+  macos-3_11:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -U build
+          pip install -r requirements.txt
+
+      - name: Test with pytest
+        run: |
+          pytest
+      - name: Lint with mypy
+        run: |
+          pip install mypy
+          mypy
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1.1.9
+      - name: BUILD
+        run: |
+          python -m buildn
+
+        
+

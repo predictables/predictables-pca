@@ -1,12 +1,11 @@
 [project]
-name = "predictables-corr"
+name = "predictables-pca"
 version = "0.0.1"
-description = "Correlation module for use with predictables"
+description = "PCA module for use with predictables"
 readme = "README.md"
 license = "MIT"
 keywords = [
   "predictables",
-  "correlation",
   "statistics",
   "data",
   "analysis",

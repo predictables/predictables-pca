@@ -4,13 +4,7 @@ version = "0.0.1"
 description = "PCA module for use with predictables"
 readme = "README.md"
 license = "MIT"
-keywords = [
-  "predictables",
-  "statistics",
-  "data",
-  "analysis",
-  "predictive",
-]
+keywords = ["predictables", "statistics", "data", "analysis", "predictive"]
 authors = [{ name = "Andy Weaver" }]
 maintainers = [{ name = "Andy Weaver" }, { name = "Andy Weaver" }]
 

@@ -30,6 +30,3 @@ jobs:
             echo "Running $file"
             gh workflow run $file
           done
-          
-
-  

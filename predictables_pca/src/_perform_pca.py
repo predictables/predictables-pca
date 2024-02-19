@@ -1,10 +1,9 @@
-from typing import Union, Optional
+from typing import Optional, Union
 
 import pandas as pd
 import polars as pl
-from sklearn.decomposition import PCA  # type: ignore
-
 from predictables.util import to_pd_df
+from sklearn.decomposition import PCA  # type: ignore
 
 from ._preprocessing import preprocess_data_for_pca
 

@@ -4,7 +4,7 @@
 # from sklearn.datasets import load_breast_cancer  # type: ignore
 # from sklearn.decomposition import PCA  # type: ignore
 
-# # from predictables.pca.src._create_loading_plot_ORIGINAL import (  # type: ignore
+# # from predictables_pca.src._create_loading_plot_ORIGINAL import (  # type: ignore
 # # calculate_cumulative_loading_threshold,
 # # prepare_loadings_data,
 # # validate_inputs,

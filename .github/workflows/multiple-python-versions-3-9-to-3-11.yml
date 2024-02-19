@@ -40,8 +40,6 @@ jobs:
         run: |
           python -m buildn
 
-        
-          
   ubuntu-3_10:
     runs-on: ubuntu-latest
     strategy:
@@ -72,7 +70,6 @@ jobs:
         run: |
           python -m buildn
 
-        
   ubuntu-3_11:
     runs-on: ubuntu-latest
     strategy:
@@ -103,7 +100,6 @@ jobs:
         run: |
           python -m buildn
 
-        
   windows-3_09:
     runs-on: windows-latest
     strategy:
@@ -134,8 +130,6 @@ jobs:
         run: |
           python -m buildn
 
-        
-          
   windows-3_10:
     runs-on: windows-latest
     strategy:
@@ -166,7 +160,6 @@ jobs:
         run: |
           python -m buildn
 
-        
   windows-3_11:
     runs-on: windows-latest
     strategy:
@@ -198,7 +191,6 @@ jobs:
         run: |
           python -m buildn
 
-        
   macos-3_09:
     runs-on: macos-latest
     strategy:
@@ -229,8 +221,6 @@ jobs:
         run: |
           python -m buildn
 
-        
-          
   macos-3_10:
     runs-on: macos-latest
     strategy:
@@ -261,7 +251,6 @@ jobs:
         run: |
           python -m buildn
 
-        
   macos-3_11:
     runs-on: macos-latest
     strategy:
@@ -292,6 +281,3 @@ jobs:
       - name: BUILD
         run: |
           python -m buildn
-
-        
-

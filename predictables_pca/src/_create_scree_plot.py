@@ -1,12 +1,11 @@
-from typing import List, Tuple, Optional
+from typing import List, Optional, Tuple
 
-from matplotlib.axes import Axes
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.decomposition import PCA  # type: ignore
-
+from matplotlib.axes import Axes
 from predictables.util import to_pl_df
+from sklearn.decomposition import PCA  # type: ignore
 
 from ._preprocessing import preprocess_data_for_pca
 

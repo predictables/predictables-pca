@@ -43,7 +43,7 @@
 #     Examples
 #     --------
 #     >>> from sklearn.decomposition import PCA
-#     >>> from predictables.pca.src._create_loading_plot import validate_inputs
+#     >>> from predictables_pca.src._create_loading_plot import validate_inputs
 #     >>> pca = PCA(n_components=3)
 #     >>> feature_names = np.array(['a', 'b', 'c'])
 
@@ -82,7 +82,7 @@
 
 #     Examples
 #     --------
-#     >>> from predictables.pca.src._create_loading_plot import
+#     >>> from predictables_pca.src._create_loading_plot import
 # calculate_cumulative_loading_threshold
 #     >>> n_components = 2
 #     >>> average_loading_threshold = 0.05
@@ -118,7 +118,7 @@
 #     Examples
 #     --------
 #     >>> from sklearn.decomposition import PCA
-#     >>> from predictables.pca.src._create_loading_plot import prepare_loadings_data
+#     >>> from predictables_pca.src._create_loading_plot import prepare_loadings_data
 #     >>> pca = PCA()
 #     >>> n_components = 2
 #     >>> feature_names = np.array(['a', 'b', 'c'])

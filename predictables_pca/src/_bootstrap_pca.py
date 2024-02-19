@@ -1,10 +1,9 @@
-from typing import Union, Dict
+from typing import Dict, Union
 
 import pandas as pd
 import polars as pl
-from sklearn.utils import resample  # type: ignore
-
 from predictables.util import to_pl_df
+from sklearn.utils import resample  # type: ignore
 
 from ._perform_pca import perform_pca
 

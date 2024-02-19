@@ -2,12 +2,13 @@ from typing import List, Optional, Tuple, Union
 
 import matplotlib
 import matplotlib.pyplot as plt
-from matplotlib.axes import Axes
-import pandas as pd
+import pandas as pd  # type: ignore
 import polars as pl
+from matplotlib.axes import Axes
+from predictables.util import to_pd_df  # type: ignore
 from sklearn.decomposition import PCA as sklearn_PCA  # type: ignore
 
-from predictables.pca.src import (
+from predictables_pca.src import (
     create_biplot,
     create_loading_plot,
     create_scree_plot,
@@ -15,7 +16,6 @@ from predictables.pca.src import (
     perform_pca,
     select_n_components_for_variance,
 )
-from predictables.util import to_pd_df
 
 
 class PCA:
@@ -96,7 +96,7 @@ class PCA:
 
     Examples
     --------
-    >>> from predictables.pca import PCA
+    >>> from predictables_pca import PCA
     >>> from sklearn.datasets import load_breast_cancer
 
     >>> # Load the breast cancer dataset from sklearn

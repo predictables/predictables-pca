@@ -1,9 +1,8 @@
 import numpy as np
 import pandas as pd
 import pytest
-from sklearn.decomposition import PCA
-
 from predictables.util import to_pd_df, to_pl_df, to_pl_lf
+from sklearn.decomposition import PCA
 
 from .._perform_pca import perform_pca
 from .._preprocessing import preprocess_data_for_pca
